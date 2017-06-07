@@ -184,14 +184,18 @@ var instructors = [
     ['James','Ruby']
 ];
 
-var instructorNameDiscipline = instructors[5];
-// greenvIlleInstructor = <your answer>
+var greenvilleInstructor = instructors[5];
+// greenvilleInstructor = ['Will', 'Javascript']
 
 var instructorOne = instructors[4][0];
-// instructorOne = <your answer>
+// instructorOne = ['Dan','JavaScript'], ['JD','JavaScript']
+//NOTE:THIS ONE ONLY RETURNED : Dan  (not even the string 'Dan' AND I DIDN'T UNDERSTAND THAT.....UNTIL.....
+
 
 var instructorTwo = instructors[0][1];
-// instructorTwo = <your answer>
+// instructorTwo = Javascript
+//NOTE:...UNTIL THIS ONE ALSO RETURNED: (without the quotes, too) Javascript.  I understand now, that the double specified index can help target a specific value IN A NESTED ARRAY. insructors[0][1] could read:
+// [0]-- "The first array in the container array" [1]-- "The second value in this array".  The console returned "quote-less" values because (instead of just returning it) I console.log(ed) it!
 
 var instructorThree = instructors[2][0];
-// instructorThree = <your answer>
+// instructorThree = Brit
