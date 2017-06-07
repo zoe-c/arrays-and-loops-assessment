@@ -105,8 +105,12 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // Write a function that accepts an array argument
 // and returns the sum of all of the numbers in the array
 // A:
+function sumArrayOfNumbers(numbers) {
+   var sum = numbers.reduce((a, b) => a + b, 0);
+    return sum;
+}
 
-
+sumArrayOfNumbers(numbers);
 
 
 console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumbers should return 177'});
@@ -116,6 +120,17 @@ console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumber
 // Write a function that accepts an array argument
 // and returns an array of only the numbers greater than 10
 // A:
+function numbersOver10(numbs) {
+  let overTen = [];
+    for (i = 0; i <= (numbs.length - 1); i++) {
+      if (numbs[i] > 10) {
+      overTen.push(numbs[i]);
+    }
+  }
+  return overTen;
+}
+
+numbersOver10(numbers);
 
 
 console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message': 'numbersOver10 should return "12,18,11,101"'});
