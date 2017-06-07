@@ -31,7 +31,7 @@ console.assert(longestString(strings) === 'collection', {"message": "longestStri
 
 
 // Use the `numbers` array for questions 3 - 8.
-var numbers = [1,12,4,18,9,7,11,3,101,5,6];
+// var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 
 
 // 3.
@@ -60,7 +60,21 @@ console.assert(smallestNumber(numbers) === 1, {"message": "smallestNumber should
 // Write a function `getEvens()` that accepts an array
 // and returns only the even numbers in the array.
 // A:
+var numbers = [1,12,4,18,9,7,11,3,101,5, 6];
 
+function getEvens(numbs) {
+  let evenNumbs = [];
+    for (i = 0; i <= numbs[numbs.length - 1]; i++) {
+    if (numbs[i] % 2 === 0) {
+      evenNumbs.push(numbs[i]);
+    }
+  }
+  return evenNumbs;
+}
+
+console.log(getEvens(numbers));
+
+// NOTE!!! THIS KEEPS LEAVING OUT THE LAST INTEGER. Find out why.
 
 console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEvens should return "12,4,18,6"'});
 
