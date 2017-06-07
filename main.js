@@ -86,14 +86,14 @@ console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEve
 
 var numbers = [1,12,4,18,9,7,11,3,101,5, 6];
 
-function reversER(numbs) {
+function arrayReverser(numbs) {
   let revArray = [];
     for (i = (numbs.length - 1); i >= 0; i--) {
     revArray.push (numbs[i]);
     }
   return revArray;
 }
-console.log(reversER(numbers));
+console.log(arrayReverser(numbers));
 
 
 
@@ -105,6 +105,8 @@ console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1
 // Write a function that accepts an array argument
 // and returns the sum of all of the numbers in the array
 // A:
+
+
 
 
 console.assert(sumArrayOfNumbers(numbers) === 177, {'message': 'sumArrayOfNumbers should return 177'});
