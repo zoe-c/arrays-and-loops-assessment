@@ -39,6 +39,19 @@ var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 // and returns the smallest number in the array.
 // A:
 
+var numbers = [1,12,4,18,9,7,11,3,101,5,6];
+function smallestNumber(numbs) {
+    let smallest = numbs[1];
+    for (i = 0; i <= numbs[numbs.length - 1]; i++) {
+    if (numbs[i] < smallest) {
+      smallest = numbs[i];
+    }
+  }
+  return smallest;
+}
+
+smallestNumber(numbers);
+
 
 console.assert(smallestNumber(numbers) === 1, {"message": "smallestNumber should return 1"});
 
