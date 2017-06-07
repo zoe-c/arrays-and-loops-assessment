@@ -41,8 +41,8 @@ console.assert(longestString(strings) === 'collection', {"message": "longestStri
 
 var numbers = [1,12,4,18,9,7,11,3,101,5,6];
 function smallestNumber(numbs) {
-    let smallest = numbs[1];
-    for (i = 0; i <= numbs[numbs.length - 1]; i++) {
+   let smallest = numbs[1];
+   for (i = 0; i <= numbs[numbs.length - 1]; i++) {
     if (numbs[i] < smallest) {
       smallest = numbs[i];
     }
@@ -140,6 +140,17 @@ console.assert(numbersOver10(numbers).toString() === "12,18,11,101", {'message':
 // Write a function that accepts both an array and number argument
 // and returns an array of only the numbers greater than the number passed to the function
 // A:
+function numbersOverX(numbers, x) {
+  let overX = [];
+    for (i = 0; i <= (numbers.length - 1); i++) {
+      if (numbers[i] > x) {
+      overX.push(numbers[i]);
+      }
+    }
+  return overX;
+}
+
+numbersOverX(numbers,15);
 
 
 console.assert(numbersOverX(numbers, 15).toString() === "18,101", {'message': 'numbersOverX should return "18,101"'});
