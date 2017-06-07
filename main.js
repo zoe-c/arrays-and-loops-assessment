@@ -64,7 +64,7 @@ var numbers = [1,12,4,18,9,7,11,3,101,5, 6];
 
 function getEvens(numbs) {
   let evenNumbs = [];
-    for (i = 0; i <= numbs[numbs.length - 1]; i++) {
+    for (i = 0; i <= (numbs.length - 1); i++) {
     if (numbs[i] % 2 === 0) {
       evenNumbs.push(numbs[i]);
     }
@@ -73,8 +73,6 @@ function getEvens(numbs) {
 }
 
 console.log(getEvens(numbers));
-
-// NOTE!!! THIS KEEPS LEAVING OUT THE LAST INTEGER. Find out why.
 
 console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEvens should return "12,4,18,6"'});
 
@@ -85,6 +83,19 @@ console.assert(getEvens(numbers).toString() === '12,4,18,6', {'message': 'getEve
 // Hint: When looping over the array, start at the last index
 // and decrement the iterator to zero
 // A:
+
+var numbers = [1,12,4,18,9,7,11,3,101,5, 6];
+
+function reversER(numbs) {
+  let revArray = [];
+    for (i = (numbs.length - 1); i >= 0; i--) {
+    revArray.push (numbs[i]);
+    }
+  return revArray;
+}
+console.log(reversER(numbers));
+
+
 
 
 console.assert(arrayReverser(numbers).toString() === '6,5,101,3,11,7,9,18,4,12,1', {'message': 'arrayReverser should return "6,5,101,3,11,7,9,18,4,12,1"'});
